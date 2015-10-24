@@ -1,0 +1,24 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+} 
+
+body {
+	font-color: #747704;
+	font-family: 'Lato', sans-serif;
+}
+
+.hrcolor {
+    border-color: #747704;
+    border-style: solid;
+    border-bottom: 4px;
+}
+
+.imageClip{
+    width:300px;
+    height: 250px;
+    overflow:hidden;
+}
+}

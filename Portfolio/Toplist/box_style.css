@@ -1,0 +1,40 @@
+* {
+	outline: 1px solid red !important;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+} 
+
+h1 {
+	background-color: #FFFFFF;
+	color: #000000;
+	font-size: 48px;
+	font-family: Helvetica;
+	text-align: right;
+	padding: 20px;
+		padding-top: 20px;
+		padding-right: 20px;
+		padding-bottom: 20px;
+		padding-left: 20px;
+	margin: 0 px;
+		margin-top: 0px;
+		margin-right: 0px;
+		margin-bottom: 0px;
+		margin-left: 0px;
+}
+
+.screenshot{
+	max-width: 460px; 
+}
+
+.description {
+	max-width: 705px;
+}
+
+.app {
+    display: flex;
+}
