@@ -85,7 +85,7 @@ function logClicks(x,y) {
 }
 
 $(document).click(function(loc) {
-  // your code goes here!
+  logClicks(loc.pageX,loc.pageY);
 });
 
 
@@ -106,12 +106,12 @@ function initializeMap() {
   var locations;
 
   var mapOptions = {
-    disableDefaultUI: true
+    disableDefaultUI: false
   };
 
   // This next line makes `map` a new Google Map JavaScript Object and attaches it to
   // <div id="map">, which is appended as part of an exercise late in the course.
-  map = new google.maps.Map(document.querySelector('#map'), mapOptions);
+  map = new google.maps.Map(document.querySelector('#mapDiv'), mapOptions);
 
 
   /*
@@ -146,11 +146,11 @@ function initializeMap() {
   placeData is the object returned from search results containing information
   about a single location.
   */
-  function createMapMarker(placeData) {
+function createMapMarker(placeData) {
 
     // The next lines save location data from the search result object to local variables
-    var lat = placeData.geometry.location.k;  // latitude from the place service
-    var lon = placeData.geometry.location.D;  // longitude from the place service
+    var lat = placeData.geometry.location.lat();  // latitude from the place service
+    var lon = placeData.geometry.location.lng();  // longitude from the place service
     var name = placeData.formatted_address;   // name of the place from the place service
     var bounds = window.mapBounds;            // current boundaries of the map window
 
@@ -233,11 +233,13 @@ Uncomment the code below when you're ready to implement a Google Map!
 */
 
 // Calls the initializeMap() function when the page loads
-//window.addEventListener('load', initializeMap);
+window.addEventListener('load', initializeMap);
 
 // Vanilla JS way to listen for resizing of the window
 // and adjust map bounds
-//window.addEventListener('resize', function(e) {
+window.addEventListener('resize', function(e) {
+  map.fitBounds(mapBounds);
+
   // Make sure the map bounds get updated on page resize
-//  map.fitBounds(mapBounds);
-//});
+  
+});
