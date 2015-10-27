@@ -81,9 +81,10 @@ a {
 
 .welcome-message {
   font-style: italic;
-  font-size: 18px;
+  font-size: 14px;
   color: #F3F3F3;
   line-height: 28px;
+  display: inline-block;
 }
 
 #skillsH3 {
@@ -140,10 +141,10 @@ ul {
 }
 
 .biopic {
-  float: left;
   padding: 10px;
   width: 200px;
-  display: none;
+  vertical-align: text-top;
+  float: left;
 }
 
 img {
@@ -210,6 +211,8 @@ span {
 @media only screen and (min-width: 750px) {
   #skillsH3,
   .biopic {
-    display: block;
+    display: inline-block;
+    float: left;
+
   }
 }
