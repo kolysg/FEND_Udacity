@@ -90,6 +90,7 @@ a {
 #skillsH3 {
   color: #F5AE23;
   display: none;
+  padding: 5px;
 }
 
 .orange {
@@ -103,6 +104,7 @@ a {
 .white-text {
   font-weight: bold;
   color: #FFFFFF;
+  padding: 5px;
 }
 
 .gray {
@@ -141,14 +143,18 @@ ul {
 }
 
 .biopic {
-  padding: 10px;
+  padding-top: 0px;
+  padding-right: 10px;
   width: 200px;
   vertical-align: text-top;
   float: left;
 }
 
 img {
-  padding: 10px;
+  margin-top: 10px;
+  padding: 0px;
+  width: 200px;
+  height: 230px;
 }
 
 /* Bar chart stuff */

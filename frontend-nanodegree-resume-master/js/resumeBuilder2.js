@@ -3,7 +3,7 @@
 //bio
 var bio = {
 	"name": "Koly Sengupta",
-	"role": "Front End Developer",
+	"role": "Front End Developer/Designer",
 	"contacts": {
 		"email": "koly.sg@gmail.com",
 		"phone": "979----7575",
@@ -12,7 +12,7 @@ var bio = {
 		"location": "East Bay, California"
 
 	},
-	"pic": "Me.png",
+	"pic": "images/Me.png",
 	//"pic": "https://scontent-ord1-1.xx.fbcdn.net/hphotos-xfa1/v/t1.0-9/11390120_10207208987806072_75049282207992131_n.jpg?oh=d2f2e7b4e70a341e6a14c3cad9943ab0&oe=568D812F",
 	"welcomeMessage": "Thanks for visitng my page. If you like my work and think I can be a good fit, please contact me in the address provided.",
 	//"skills": ["Inquisitive", "Persistent", "Agile", "Pixel-perfectionist"]
@@ -43,11 +43,10 @@ bio.display = function(){
 	$("#topContacts").append(formattedLocation);
 
 	var formattedPic = HTMLbioPic.replace("%data%", bio.pic);
-	$("#topContacts").append(formattedPic);
+	$("#header").append(formattedPic);
 
 	var formattedWelcomeMsg = HTMLWelcomeMsg.replace("%data%", bio.welcomeMessage);
-	$("#topContacts").append(formattedWelcomeMsg);
-
+	$("#header").append(formattedWelcomeMsg);
 //var formattedPic = HTMLbioPic.replace("%data%", bio.pic);
 //$("#topContacts").append(formattedPic);
 
@@ -206,18 +205,16 @@ var projects = {
 		"title" : "Online Portfolio",
 		"date" : "August - Sept 2015",
 		"description" : "Developed a personal portfolio page using HTML, CSS, and the Bootstrap framework.The page is fully responsive and works on mobile, tablet, and desktop browsers.",
-		"images" : [
-		"github link"
-		]
+		"images" : ["images/Capture_portfolio.jpg"],
+		"github link": "https://github.com/kolysg/FEND_Udacity/tree/master/Portfolio"
+		
 	},
 
 	{
 		"title" : "Online Resume",
 		"date" :"Sept - Oct 2015",
-		"description" :"Developed a personal resume page using Javascript and Jquery.",
-		"images" : [
-		"github link"
-		]
+		"description" :"Developed this personal resume page using Javascript and Jquery.",
+		"github link":"https://github.com/kolysg/FEND_Udacity/tree/master/Online%20Resume"
 	}
 
 	]
@@ -246,14 +243,7 @@ projects.display = function(){
 }
 projects.display();
 
-
 //Loc
-/*$(document).click(function(loc) {
-	var x = loc.pageX;
-	var y = loc.pageY;
-	logClicks(x,y);
-});
-
 
 //Locationizer
 function locationizer(work){
@@ -264,17 +254,17 @@ function locationizer(work){
 	}
 	return locationArray;	
 }
-*/
 
 //Internationalize
-function inName(name){
-	var splitName = name.trim().split(" ");
-	console.log(splitName);
-	var firstName = splitName[0].slice[0].toUpperCase() + splitName[0].slice[1].toLowerCase();
-	var lastName = splitName[1].toUpperCase;
-	return firstName + "" + lastName;
+function inName(name) {
+	name = name.trim().split(" ");
+	console.log(name);
+	name[0] = name[0].slice(0,1).toUpperCase() + name[0].slice(1).toLowerCase();
+	name[1] = name[1].toUpperCase();
+	return name[0] + " " + name[1];
 }
-$("#main").append(internationalizeButton);	
+
+$("#header").prepend(internationalizeButton);	
 
 $("#mapDiv").append(googleMap);
 

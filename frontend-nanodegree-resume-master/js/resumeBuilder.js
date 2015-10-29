@@ -16,7 +16,7 @@ var bio = {
 
 	"skills": ["Web Design", "Graphic Design","Architectural Design","Data Analysis","Basic Programming"],
 	"welcomeMessage": "Thanks fvisiting my site",
-	"myPic":"C:\Users\Koly\OneDrive\Pictures\Koly.jpg"
+	"myPic":"koly.jpg"
 }
 
 var formattedSkills = HTMLskills.replace("%data%", bio.skills);
@@ -31,42 +31,58 @@ var work = {
 }
 
 var education = {
-	"schools": [
-		{
-			"name": "Texas A&M University",
-			"city": "College Station, TX, US",
-			"degree":"Masters",
-			"major": ["Urban & Regional Planning"],
-			"dates": "2011-2013"
-		},
-	
-		{
-			"name": "Bangladesh University of Engineering and Technology",
-			"city": "Dhaka, Bangladesh",
-			"degree":"Bachelor's",
-			"major": ["Architecure"],
-			"dates": "2001-2008"
-		}
-
-	]
-},
-
-	"onlineCourses": [
-		{
-			"title": "Introduction to programming in Python (Part 1)",
-			"school": "Coursera - Rice University",
-			"dates": "2014",
-			"url": "https://www.coursera.org/course/interactivepython1" 
-		},
-
-		{
-			"title": "Front End Development Nanodegree",
-			"school": "Udacity",
-			"dates": "2015",
-			"url": "https://www.udacity.com"
-		}		
-	]
+    "schools": [
+        {
+            "name": "Texas A&M University",
+            "city": "College Station, TX, US",
+            "degree": "Masters",
+            "major": "Urban & Regional Planning",
+            "dates": "2011-2013"
+        },
+        {
+            "name": "Bangladesh University of Engineering and Technology",
+            "city": "Dhaka, Bangladesh",
+            "degree": "Bachelor's",
+            "major": "Architecure",
+            "dates": "2001-2008"
+        }
+    ],
+    "onlineCourses": [
+        {
+            "title": "Introduction to programming in Python (Part 1)",
+            "school": "Coursera - Rice University",
+            "dates": "2014",
+            "url": "https://www.coursera.org/course/interactivepython1"
+        },
+        {
+            "title": "Front End Development Nanodegree",
+            "school": "Udacity",
+            "dates": "2015",
+            "url": "https://www.udacity.com"
+        }
+    ]
 }
 
 
 
+
+// Skillset
+/*if (bio.skills.length > 0){
+	$("#header").append(HTMLskillsStart);
+	var formattedSkill = HTMLskills.replace("%data%", bio.skills[0]);
+	$("#skills").append(formattedSkill);
+	formattedSkill = HTMLskills.replace("%data%", bio.skills[1]);
+	$("#skills").append(formattedSkill);
+	formattedSkill = HTMLskills.replace("%data%", bio.skills[2]);
+	$("#skills").append(formattedSkill);
+	formattedSkill = HTMLskills.replace("%data%", bio.skills[3]);
+	$("#skills").append(formattedSkill);
+	var formattedSkill = HTMLskills.replace("%data%", bio.skills[4]);
+	$("#skills").append(formattedSkill);
+	formattedSkill = HTMLskills.replace("%data%", bio.skills[5]);
+	$("#skills").append(formattedSkill);
+	formattedSkill = HTMLskills.replace("%data%", bio.skills[6]);
+	$("#skills").append(formattedSkill);
+	formattedSkill = HTMLskills.replace("%data%", bio.skills[7]);
+	$("#skills").append(formattedSkill);
+}*/
