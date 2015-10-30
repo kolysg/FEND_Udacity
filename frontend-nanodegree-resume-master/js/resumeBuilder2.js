@@ -29,26 +29,30 @@ bio.display = function(){
 
 	var formattedEmail = HTMLemail.replace("%data%", bio.contacts["email"]);
 	$("#topContacts").append(formattedEmail);
+	$("#footerContacts").append(formattedEmail);
 
 	var formattedPhone = HTMLmobile.replace("%data%", bio.contacts.phone);
 	$("#topContacts").append(formattedPhone);
+	$("#footerContacts").append(formattedPhone);
 
 	var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
 	$("#topContacts").append(formattedGithub);
+	$("#footerContacts").append(formattedGithub);
 
 	var formattedTwit = HTMLtwitter.replace("%data%", bio.contacts.twitter);
 	$("#topContacts").append(formattedTwit);
+	$("#footerContacts").append(formattedTwit);
 
 	var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
 	$("#topContacts").append(formattedLocation);
 
 	var formattedPic = HTMLbioPic.replace("%data%", bio.pic);
+
 	$("#header").append(formattedPic);
 
 	var formattedWelcomeMsg = HTMLWelcomeMsg.replace("%data%", bio.welcomeMessage);
 	$("#header").append(formattedWelcomeMsg);
-//var formattedPic = HTMLbioPic.replace("%data%", bio.pic);
-//$("#topContacts").append(formattedPic);
+
 
 
 //SkillSet for-in method
@@ -206,6 +210,7 @@ var projects = {
 		"date" : "August - Sept 2015",
 		"description" : "Developed a personal portfolio page using HTML, CSS, and the Bootstrap framework.The page is fully responsive and works on mobile, tablet, and desktop browsers.",
 		"images" : ["images/Capture_portfolio.jpg"],
+		"alt": "image of portfolio",
 		"github link": "https://github.com/kolysg/FEND_Udacity/tree/master/Portfolio"
 		
 	},
@@ -214,6 +219,8 @@ var projects = {
 		"title" : "Online Resume",
 		"date" :"Sept - Oct 2015",
 		"description" :"Developed this personal resume page using Javascript and Jquery.",
+		"images" : [""],
+		"alt": "image of resume",
 		"github link":"https://github.com/kolysg/FEND_Udacity/tree/master/Online%20Resume"
 	}
 
@@ -234,7 +241,7 @@ projects.display = function(){
 //Why if statement in here??
 		if (projects.projects[project].images.length > 0){
 			for (image in projects.projects[project].images){
-				var formattedProjectImage = HTMLprojectImage.replace("%data%", projects.projects[project].images);
+				var formattedProjectImage = HTMLprojectImage.replace("%data%", projects.projects[project].images).replace('%datum%', projects.projects[project].alt);
 				$(".project-entry:last").append(formattedProjectImage);
 			}
 		}
@@ -246,14 +253,14 @@ projects.display();
 //Loc
 
 //Locationizer
-function locationizer(work){
-	var locationArray = [];
-	for (job in work.jobs){
-		var newLocation = work.jobs[job].location;
-		locationArray.push(newLocation);
-	}
-	return locationArray;	
-}
+//function locationizer(work){
+//	var locationArray = [];
+//	for (job in work.jobs){
+//		var newLocation = work.jobs[job].location;
+//		locationArray.push(newLocation);
+//	}
+//	return locationArray;	
+//}
 
 //Internationalize
 function inName(name) {
@@ -265,7 +272,6 @@ function inName(name) {
 }
 
 $("#header").prepend(internationalizeButton);	
-
 $("#mapDiv").append(googleMap);
 
 
