@@ -222,6 +222,15 @@ var projects = {
 		"images" : [""],
 		"alt": "image of resume",
 		"github link":"https://github.com/kolysg/FEND_Udacity/tree/master/Online%20Resume"
+	},
+
+	{
+		"title" : "Pong Game in Python",
+		"date" :"Sept - Oct 2014",
+		"description" :"Developed a Pong game using key events in Python.",
+		"images" : ["images/Pong_game.png"],
+		"alt": "image of Pong Game",
+		"project link":"http://www.codeskulptor.org/#user40_6Q0bID6XeV_0.py"
 	}
 
 	]
