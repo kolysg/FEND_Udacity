@@ -215,14 +215,14 @@ var projects = {
 		
 	},
 
-	{
+	/*{
 		"title" : "Online Resume",
 		"date" :"Sept - Oct 2015",
 		"description" :"Developed this personal resume page using Javascript and Jquery.",
 		"images" : [""],
 		"alt": "image of resume",
 		"github link":"https://github.com/kolysg/FEND_Udacity/tree/master/Online%20Resume"
-	},
+	},*/
 
 	{
 		"title" : "Pong Game in Python",
@@ -231,6 +231,15 @@ var projects = {
 		"images" : ["images/Pong_game.png"],
 		"alt": "image of Pong Game",
 		"project link":"http://www.codeskulptor.org/#user40_6Q0bID6XeV_0.py"
+	},
+
+	{
+		"title" : "Stop Watch in Python",
+		"date" :"Sept - Oct 2014",
+		"description" :"Developed a Stop Watch exploring different event handlers in Python.",
+		"images" : ["images/Stop_watch.png"],
+		"alt": "image of Stop Watch",
+		"project link":"https://github.com/kolysg/Python/blob/master/Stopwatch.py"
 	}
 
 	]
