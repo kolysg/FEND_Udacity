@@ -92,6 +92,12 @@ a {
   display: block;
 }
 
+#skills {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+}
+
 .orange {
   background-color: #F5AE23;
 }
